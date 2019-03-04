@@ -9,12 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var tab = ["coucou","salut","bonjour"]
+    @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        changeLabel()
     }
-
+    @IBAction func changeLabel() {
+        label.text = tab.randomElement()
+    }
+    
+    
 
 }
 
